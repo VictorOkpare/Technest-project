@@ -1,0 +1,69 @@
+body {
+    background-color: #f5f4fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-ctn {
+    margin-top: 10px;
+
+    width: 80%;
+    max-width: 400px;
+    background-color: #1c2429;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card-header-ctn {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card-image-ctn {
+    text-align: center;
+    
+}
+
+.card-image-ctn > img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #4a4a4a;
+}
+
+.card-text-ctn {
+    color: rgb(255, 253, 253);
+    line-height: 1.5;
+}
+
+.hero-name {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    color: #f6f0f0;
+    margin-bottom: 10px;
+    
+}
+
+.archetype {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 40px;
+    color: #8e2424;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #fcf9f9;
+    margin: 10px 40px;
+}
