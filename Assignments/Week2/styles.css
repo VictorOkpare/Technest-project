@@ -19,6 +19,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     padding: 20px;
+
 }
 
 .card-header-ctn {
@@ -37,6 +38,7 @@ body {
 .card-image-ctn > img {
     width: 80%;
     height: auto;
+    max-height:300px;
     border-radius: 10px;
     border: 2px solid #4a4a4a;
 }

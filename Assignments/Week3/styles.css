@@ -1,0 +1,81 @@
+body{
+    background-color: #f5f4fa;
+    font-family:cursive;
+}
+
+.title-section{
+    display: flex;
+    margin:  auto;
+    justify-content: center;
+    border-radius: 20px;
+    gap: 15px;
+
+    width: 30%;
+    align-items: center;
+    color: #E70035;
+    background-color: #1c2429;
+    /* box-shadow: 2px 2px 10px rgb(70, 71, 71); */
+
+    margin-bottom: 60px;
+
+}
+.title-section>:nth-child(1){
+    width: 30%;
+    
+}
+.title-section>:nth-child(2){
+    
+    text-shadow: 1px 1px 5px #362c38;
+    
+}
+
+.card-container{
+    display: grid;
+    width:80%;
+    height:max-content;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    /* column-gap: 50px; */
+    /* row-gap: 50px; */
+    margin:auto;
+    font-size: larger;
+    color:#E70035;
+    
+   
+
+   
+}
+#hero-shinning{
+    font-size:10px;
+    color: blue;
+}
+
+.card-items:hover{
+    box-shadow: 1px 1px 15px #1c2429; 
+    background-color:#f5f4fa ; 
+    color: #1c2429;
+    transition-duration: 0.3s;
+}
+.card-items{
+    /* box-shadow: 3px 3px 6px; */
+    display: grid;
+    padding: 20px;
+    border-radius: 20px;
+    grid-template-columns: 2fr 2fr  ;
+    gap: 30px;
+    background-color: #1c2429;
+    
+
+    
+}
+.card-items>img{
+    width: 100%;
+    border-radius: 50%;
+    background-color: #1c2429;
+    height: 100%;
+    max-height:110px ;
+}
+a{
+   text-decoration: none;
+   color: #E70035;
+}
