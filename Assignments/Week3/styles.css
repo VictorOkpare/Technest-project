@@ -79,3 +79,9 @@ a{
    text-decoration: none;
    color: #E70035;
 }
+
+button{
+    border:none;
+    cursor:pointer;
+    
+}
