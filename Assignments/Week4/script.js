@@ -46,7 +46,7 @@ const heroDetails = [
 //Selects the container element to render the hero cards 
 const container = document.querySelector(".card-container");
 
-/**Function create the cards by maping through the heoDetails array 
+/**Function creates the cards by maping through the heoDetails array 
  * and rendering each hero's details as a card **/
 const createHeroCards = () => {
   const cardItems = heroDetails.map((hero) => {
