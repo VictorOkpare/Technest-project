@@ -9,6 +9,10 @@
 
 - Utilized the map() function to generate hero cards dynamically
 
+- Used the URLSearchParams to retrieve the Hero index from the Hero card page
+
+- Utilized the parseInt() to ensure the index passed is an integer data type
+
 - Continued with the styles that was used in the previous task
 
 

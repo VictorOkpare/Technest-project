@@ -1,4 +1,3 @@
-//Define an array of object to store characters details and images
 const heroDetails = [
 
   {
@@ -42,38 +41,39 @@ const heroDetails = [
 
 ];
 
+// selects the DOM element the profile card will be rendered into
+const profileContainer = document.querySelector(".card-ctn")
 
 
+//retrieves the Hero index and makes sure it is parses as an interger using the parseInt() function
+const urlParams = new URLSearchParams(window.location.search);
+const heroIndex = parseInt(urlParams.get("index"),10);
 
-//Selects the container element to render the hero cards 
-const container = document.querySelector(".card-container");
+//this function renders the heroprofilecard
+const heroProfileCard = ()=>{
 
-/**Function creates the cards by maping through the heroDetails array and renders hero cards in the .card-container element
- * and rendering each hero's details as a card **/
-const createHeroCards = () => {
-
-  //hero represents the current hero array and an index is assigned to the current hero in the array
-  const cardItems = heroDetails.map((hero, index) => {
-
-    // the onclick event redirects the user to the profile page based on the index which is passed as a query parameter
-    
-    return `<button onclick="window.location.href = './profileCard.html?index=${index}'">
-
-        <div class="card-items">
-          <img src=${hero.image} alt=${hero.heroName}/>
-          <h3>${hero.heroName}</h3>
-          
+  const hero = heroDetails[heroIndex];
+  
+    const cardItem =`
+      <div class="card-header-ctn">
+        <p> HERO CARD</p>
+        <div class="card-image-ctn">
+          <img src=${hero.image} alt=${hero.heroName}>
         </div>
-      </button>`;
-  }).join("");
 
-  //Renders the hero cards inside the container element
-  container.innerHTML = cardItems;
-};
+        <div class="card-text-ctn">
+            <p class="hero-name">${hero.heroName}</p>
+            <p class="archetype">Elemental hero</p>
+            <p class="description">${hero.description}</p>
+        </div>
+        </div>
 
-//Calls the function to create and render hero cards
-createHeroCards();
+        `;
+  
 
-
+  profileContainer.innerHTML = cardItem
+}
+// calls the heroProfileCard() Function
+heroProfileCard();
 
 
