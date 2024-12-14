@@ -41,6 +41,9 @@ const heroDetails = [
        
 ]
 
+
+
+
 const [ firstHero, secondHero, thirdHero, fourthHero, fifthHero, sixthHero ] = heroDetails //destructured Hero Details object
 
 
