@@ -19,6 +19,12 @@ body{
     margin-bottom: 60px;
 
 }
+
+h3{ 
+    color: #E70035;
+    font-size: larger;
+    font-weight: 700;
+}
 .title-section>:nth-child(1){
     width: 30%;
     
@@ -52,8 +58,8 @@ body{
 
 .card-items:hover{
     box-shadow: 1px 1px 15px #1c2429; 
-    background-color:#f5f4fa ; 
-    color: #1c2429;
+    background-color:#fff ; 
+    /* color: #1c2429; */
     transition-duration: 0.3s;
 }
 .card-items{
