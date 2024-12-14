@@ -14,7 +14,7 @@
 
 Here is a demo
 
-![Screenshot of charactercard](./Assignments/assets/images/screenshot4.png)
+![Screenshot of charactercard](./Assignments/assets/images/Screenshot4.png)
 
 
 
