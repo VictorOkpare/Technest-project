@@ -1,7 +1,7 @@
 ** Week 5 **
  Action Items 1: Update your webpages to dynamically render UI from a JSON file .
 
- Here are the steps i took to dynamically render data from the Json file.
+ Here are the steps i took to dynamically render data from the Json file
 
 * - I Created a folder "data" in my assets folder to store static data
   - I converted the herodetails array of the Week4 task to  Json data and created the heroDetails.json file
@@ -19,33 +19,3 @@
 - Empty Data Error: If I have an empty array the if statement in my try block will run and will display an erro message in my HTML container.
 
 - Index Error: In my profilecard section I handled errors that could occur from the heroIndex. The heroIndex is assigned to every card when the heroDetails is been mapped through from the json data. This index is used in the profilecard section to match the heroCard that was clicked and the data of the hero in the heroDetails then the data is rendered on the Hero Profile Card. I used the try-catch block to check if the heroIndex is valid, and for every invalid heroIndex I return an message to the HTML container
-
-
-
-
-
-**Week 4**
-
-* Action-item:Update your webpages to display static data from a Javascript file, instead of the data being hardcoded in the HTML file *
-
-**Steps**
-* - Defined an array of object to store static data for each hero character
-
-- Used querySelector to select the element where the data should be rendered
-
-- Utilized the map() function to generate hero cards dynamically
-
-- Used the URLSearchParams to retrieve the Hero index from the Hero card page
-
-- Utilized the parseInt() to ensure the index passed is an integer data type
-
-- Continued with the styles that was used in the previous task
-
-
-Here is a demo
-
-![Screenshot of charactercard](./Assignments/assets/images/Screenshot4.png)
-
-
-
-
