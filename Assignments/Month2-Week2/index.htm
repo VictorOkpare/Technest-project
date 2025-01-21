@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Yu-Gi-Oh Collection</title>
+</head>
+<body>
+    <h1>Yu-Gi-Oh  Cards Collection</h1>
+    <div class="cards-wrapper" id="cardsWrapper"></div>
+
+    <!-- Modal -->
+    <div id="cardModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-card">
+                <img id="modalImage" src="" alt="Card Image">
+                <div class="card-details">
+                    <h2 id="modalName"></h2>
+                    <p id="modalType"></p>
+                    <p id="modalAttribute"></p>
+                    <p id="modalLevel"></p>
+                    <p id="modalAtkDef"></p>
+                    <p id="modalDesc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
