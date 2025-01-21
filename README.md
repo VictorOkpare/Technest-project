@@ -17,6 +17,8 @@ Action item 2: Expand error handling on your web page(s). Consider the user expe
 -Refactor CSS for enhanced styling and responsiveness
 
 
+![Watch demo](./Assignments/assets/media/demoM2W2.gif)
+
 
 
 
