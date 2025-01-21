@@ -1,7 +1,5 @@
 **Month 2-Week 2**
 
-I decided to modify my codes to make it more scaleable and reuseable.
-
 Action item 1: Fetch data from an API and dynamically render UI.
 
 - I continued with the Yu-gi-oh cards and got this api endpoint https://db.ygoprodeck.com/api/v7/cardinfo.php to fetch data for my cards.
@@ -10,7 +8,14 @@ Action item 1: Fetch data from an API and dynamically render UI.
 Action item 2: Expand error handling on your web page(s). Consider the user experience for such cases as data fetching failures, lost network connection, etc.
 
 - I learnt how to handle exceptions for when there is a lost of connection so i included a simple error message for that.
-- I also caught errors for invalid 
+- I also caught exceptions for invalid data and when a data is not available, or for an invalid fetch.
+
+**General Improvements**
+
+-Improved structure and maintainability of code
+-Integrated card modal functionality and improved profile detail card handling
+-Refactor CSS for enhanced styling and responsiveness
+
 
 
 
