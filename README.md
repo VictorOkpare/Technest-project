@@ -18,6 +18,7 @@ General Improvements
 - Added more exceptions handling
 - Cached image data into indexDB to limit number of API call and improve offline functionality (not fully implemented yet due to CORS restrictions from the API)
 
+[Month2-Week5](https://github.com/VictorOkpare/Technest-project/tree/main/Assignments/Month2-week5)
 ![Watch demo](./Assignments/assets/media/demoM2W5.gif)
 
 **Month 2-Week 2**
@@ -39,10 +40,8 @@ Action item 2: Expand error handling on your web page(s). Consider the user expe
 -Refactor CSS for enhanced styling and responsiveness
 
 
-[Month2-Week5](https://github.com/VictorOkpare/Technest-project/tree/main/Assignments/Month2-week5)
-
 ![Watch demo](./Assignments/assets/media/demoM2W2.gif)
-
+[Month2-Week2](https://github.com/VictorOkpare/Technest-project/tree/main/Assignments/Month2-week5)
 
 
 
