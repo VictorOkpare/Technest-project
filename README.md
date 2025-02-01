@@ -1,3 +1,25 @@
+**Month 2 Week 5**
+Action item 1: Add functionality to search and filter your webpage with multiple characters. You decide whether you want to use local data or fetched data from an API, and how "smart" you want your search functionality to be - i.e., exact name matching ("firstName lastName"), partial name matching ("firstNa"), case sensitivity ("firstname lastname"), wildcard or pattern support ("first*", "f?rst"), fuzzy searching (find results even when the search query contains slight variations or misspellings), etc.
+
+- This week, I implemented search and filter functionality in my project. Given the large dataset available through the API call to https://db.ygoprodeck.com/api/v7/cardinfo.php, I optimized the fetch request by limiting the response to cards with the archetype "Elemental HERO." The modified API call is: https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=Elemental%20HERO. This ensures more efficient data retrieval and better performance.
+
+- The search functionality allows users to search by different category, Using the filter button to set the input field to the category the user would like to search by.
+The *handleSearch* function takes two argument, which is the search term and the category e.g("searchquery", "attribute" ).It uses Fuse.js, a fuzzy search library, to perform the search.
+
+- Action Item 2: Add functionality to reset the data and display all the characters once more. You decide how it looks - e.g., reset button, clear search bar, etc.
+
+- I added a clear button in th searchbar.js which is a reusable module in my project. When the clear button is clicked it calls the *clearSearch* method, which sets the value of the input field to an empty string which will call the *onSearch* method which resets the *filteredCard* to *allcard*. 
+
+
+General Improvements
+- I corrected the stretched image in the modal cards 
+- I included an online notification
+- I implemented eventlisteners to close the modal when you click outside the modal or use the escape key.
+- Added more exceptions handling
+- Cached image data into indexDB to limit number of API call and improve offline functionality (not fully implemented yet due to CORS restrictions from the API)
+
+![Watch demo](./Assignments/assets/media/demoM2W5.gif)
+
 **Month 2-Week 2**
 
 Action item 1: Fetch data from an API and dynamically render UI.
@@ -17,8 +39,10 @@ Action item 2: Expand error handling on your web page(s). Consider the user expe
 -Refactor CSS for enhanced styling and responsiveness
 
 
+[Month2-Week5](https://github.com/VictorOkpare/Technest-project/tree/main/Assignments/Month2-week5)
+
 ![Watch demo](./Assignments/assets/media/demoM2W2.gif)
-[Month2-Week2](https://github.com/VictorOkpare/Technest-project/tree/main/Assignments/Month2-Week2)
+
 
 
 
