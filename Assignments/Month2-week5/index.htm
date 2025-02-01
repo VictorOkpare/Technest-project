@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Yu-Gi-Oh Collection</title>
+   
 </head>
 <body>
     <h1>Yu Gi Oh Cards Collection</h1>
-    <div class="cards-wrapper" id="cardsWrapper"></div>
 
-    <!-- Modal -->
+    <div id="online-alert">You are back online!</div>
+    <div id="offline-alert">Your network connection was lost!</div>
+    
+    <div id="searchContainer"></div>
+
+    <div class="cards-wrapper" id="cardsWrapper"></div>
+    
     <div id="cardModal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -27,7 +33,11 @@
             </div>
         </div>
     </div>
+    
+    <div id="paginationControls"></div>
 
-    <script src="./main.js"></script>
+    <script src="./main.js" type="module"></script>
+    
+
 </body>
 </html>

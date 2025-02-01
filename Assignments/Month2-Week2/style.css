@@ -1,8 +1,8 @@
 /* Colour theme */
 :root {
-    --theme1: #a80808;
+    --theme1: #ce0c2f;
     --theme2: #0e0e0e;
-    --theme3: #710606;
+    --theme3: #ce0c2f;
     --theme4: #f3f5f5;
     --text-color: #f9f8f9;
     --bg-color: #302f2f;
@@ -18,11 +18,11 @@ body {
 
 h1 {
     text-align: center;
-    color: var(--theme1);
-    padding: 20px;
+    color: var(--theme1); 
+    padding: 20px;   
     background-color: var(--theme2);
     border-bottom: 4px solid var(--theme3);
-    margin: 0;
+    margin: 0;  
 }
 
 .card-container {
