@@ -1,3 +1,46 @@
+**Month 3 Week 1**
+Action Items
+Action Item 1: Add Pagination Functionality
+
+
+This week I  continued with the implementation of pagination with Back and Next buttons to navigate through the card data. It also uses numbered pagination (e.g., 1 2 ... 10) for easy navigation between pages.
+
+Pagination works for both filtered (search results) and unfiltered data.
+
+Users can now view a limited number of cards per page (CARDS_PER_PAGE = 9), improving performance and user experience.
+
+
+
+- The updatePaginationControls() function dynamically generates pagination buttons based on the current page and total pages.
+
+- The changePage() function handles page navigation and re-renders the cards for the selected page.
+
+Action Item 2: Jump-to-Page Functionality
+
+
+I added a *Jump to Page* feature, allowing users to input a specific page number and navigate directly to it.
+
+Input validation ensures users enter a valid page number within the available range.
+
+Technical Details:
+
+The jumpToInput and jumpToButton elements handle the jump-to-page functionality.
+
+The jumpToButton event listener validates the input and calls changePage() to render the selected page.
+
+Action Item 3: Infinite Scroll (Optional)
+What’s New:
+
+I implemented a Load More button to dynamically append additional cards to the current view, simulating a controlled infinite scroll.
+
+This feature is available for mobile display.
+
+Technical Details:
+
+The loadMoreButton event listener increments the currentPage and appends new cards to the existing view using the renderCards() function with the append parameter set to true.
+
+You can view the [demo here](https://drive.google.com/file/d/1Ko44ejxEYyOmdZGWsv95vLwZMTKk6sMd/view?usp=drive_link)
+
 **Month 2 Week 5**
 Action item 1: Add functionality to search and filter your webpage with multiple characters. You decide whether you want to use local data or fetched data from an API, and how "smart" you want your search functionality to be - i.e., exact name matching ("firstName lastName"), partial name matching ("firstNa"), case sensitivity ("firstname lastname"), wildcard or pattern support ("first*", "f?rst"), fuzzy searching (find results even when the search query contains slight variations or misspellings), etc.
 
