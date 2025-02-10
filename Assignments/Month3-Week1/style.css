@@ -8,27 +8,6 @@
     --bg-color: #302f2f;
 }
 
-
-/* Light Mode */
-/* [data-theme="light"] {
-    --theme1: #ce0c2f;
-    --theme2: #f3f5f5;
-    --theme3: #ce0c2f;
-    --theme4: #0e0e0e;
-    --text-color: #0e0e0e;
-    --bg-color: #f3f5f5;
-} */
-
-/* Dark Mode */
-/* [data-theme="dark"] {
-    --theme1: #ce0c2f;
-    --theme2: #0e0e0e;
-    --theme3: #ce0c2f;
-    --theme4: #f3f5f5;
-    --text-color: #f9f8f9;
-    --bg-color: #302f2f;
-} */
-
 body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-color);
