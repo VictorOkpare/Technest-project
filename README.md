@@ -1,5 +1,39 @@
-**Month 3 Week 1**
-Action Items
+**Month 3 Week 3**
+Action Item 1: Write uniit and or integration tests for your project using Jest or a similar testing framework!
+
+I performed unit testing on the searchbar component for the following scenerios
+ - *Rendering Test*: Verifies that the search bar is rendered with the correct elements (input, filter button, and clear button)
+
+ - *Input Event Test*: Ensures that the onSearch callback is called with the correct search term and category when the input changes
+
+ - *Filter toggle Test*: Checks that the search category cycles correctly and updates the placeholder text when the filter button is clicked
+
+ - *Clear Button Test*: Verifies that the search input is cleared and the clear button is disabled when the clear button is clicked.
+
+ - *Clear Button State Test*: Ensures that the clear button is enabled /disabled based on whether the input has a value.
+
+
+ Action Item 2: Write end-to-end user tests for your project: 
+
+ I performed functional and user experience testing on the search bar feature of my project. Here is the [Test Script](https://docs.google.com/spreadsheets/d/1-vll2ZoW1YdLE4vjhw76oA3FrzB9D3rePY8M98WxD44/edit?usp=sharing) it contains all test cases that was covered in this test.
+
+ General Improvements: 
+ *UI Revamp*- A New look for the UI of my project, improved responsive design on big screens and mobile screens . 
+ *Dark mode and Light mode themes*- The project now has a theme button tha allows users to toggle between dark mode and light mode![UI-Revamp](./Assignments/assets/media/uioptimization.gif)
+
+
+ *Renamed Project Title* for better SEO
+
+**Installation**
+1. Clone the repository 
+2. Navigate to the technest folder and run the command *npm install* to load the necessary dependencies on the project.
+
+
+
+
+
+**Month 3 Week 2**
+
 Action Item 1: Add Pagination Functionality
 
 
@@ -41,7 +75,7 @@ The loadMoreButton event listener increments the currentPage and appends new car
 
 You can view the [demo here](https://drive.google.com/file/d/1Ko44ejxEYyOmdZGWsv95vLwZMTKk6sMd/view?usp=drive_link)
 
-**Month 2 Week 5**
+**Month 3 Week 1**
 Action item 1: Add functionality to search and filter your webpage with multiple characters. You decide whether you want to use local data or fetched data from an API, and how "smart" you want your search functionality to be - i.e., exact name matching ("firstName lastName"), partial name matching ("firstNa"), case sensitivity ("firstname lastname"), wildcard or pattern support ("first*", "f?rst"), fuzzy searching (find results even when the search query contains slight variations or misspellings), etc.
 
 - This week, I implemented search and filter functionality in my project. Given the large dataset available through the API call to https://db.ygoprodeck.com/api/v7/cardinfo.php, I optimized the fetch request by limiting the response to cards with the archetype "Elemental HERO." The modified API call is: https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=Elemental%20HERO. This ensures more efficient data retrieval and better performance.
