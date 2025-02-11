@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32 x 32" href="../assets/images/logo.png"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Yu-Gi-Oh! Cards Viewer</title>
+   
+</head>
+<body>
+    <div class="logo-container">
+        <img src="../assets/images/logo.png" alt="" class="logo" />
+        <h2>Yu-Gi-Oh! Cards Viewer </h2>
+    </div>
+        
+    
+    
+
+    <div id="online-alert">You are back online!</div>
+    <div id="offline-alert">Your network connection was lost!</div>
+    
+    <div id="searchContainer"></div>
+
+    <div class="cards-wrapper" id="cardsWrapper"></div>
+    
+    <div id="cardModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-card">
+                <img id="modalImage" src="" alt="Card Image">
+                <div class="card-details">
+                    <h2 id="modalName"></h2>
+                    <p id="modalType"></p>
+                    <p id="modalAttribute"></p>
+                    <p id="modalLevel"></p>
+                    <p id="modalAtkDef"></p>
+                    <p id="modalDesc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<div class="pagination-section">
+    <div class="load-more-wrapper">
+        <button class="load-more-button">Load More</button>
+    </div>
+    
+    <div class="pagination-wrapper">
+        <div id="paginationControls">
+           
+            <button>1</button>
+            <button>2</button>
+            <span class="ellipsis">...</span>
+            <button>5</button>
+            
+        </div>
+    </div>
+    
+    <div class="jump-to-wrapper">
+        <div class="jump-to-container">
+            <input type="number" class="jump-to-input" placeholder="Page">
+            <button class="jump-to-button">Go</button>
+        </div>
+    </div>
+</div>
+
+    <script src="./main.js" type="module"></script>
+    <script src="./theme.js" ></script> 
+    
+
+</body>
+</html>
