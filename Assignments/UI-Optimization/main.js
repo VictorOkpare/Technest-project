@@ -1,13 +1,16 @@
 import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.min.js';
 import SearchBar from './SearchBar.js';
 
-const API_URL = "https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=Elemental%20HERO"; // API endpoint to fetch card data
+const selectedArchetype = localStorage.getItem("selectedArchetype") || "Elemental HERO";
+
+// Update API URL to use the selected archetype
+const API_URL = `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${encodeURIComponent(selectedArchetype)}`; // API endpoint to fetch card data
 const cardsWrapper = document.getElementById("cardsWrapper"); // Container for card elements
 const paginationControls = document.getElementById("paginationControls"); // Container for pagination buttons
 const loadMoreButton = document.querySelector(".load-more-button"); // Load More button
 const jumpToInput = document.querySelector(".jump-to-input"); // Jump to input
 const jumpToButton = document.querySelector(".jump-to-button"); // Jump to button
-const CARDS_PER_PAGE = 9; // Number of cards to display per page
+const CARDS_PER_PAGE = 10; // Number of cards to display per page
 let currentPage = 1; // Track the current page
 let totalPages = 1; // Total number of pages available
 let allCards = []; // Store all fetched cards in memory
@@ -37,7 +40,6 @@ function initializeDB() {
     });
 }
 
-
 function saveImageToIndexedDB(db, imageUrl, blob) {
     return new Promise((resolve, reject) => {
         const transaction = db.transaction("images", "readwrite");
@@ -55,7 +57,6 @@ function saveImageToIndexedDB(db, imageUrl, blob) {
         };
     });
 }
-
 
 function loadImageFromIndexedDB(db, imageUrl) {
     return new Promise((resolve, reject) => {
@@ -83,7 +84,10 @@ function loadImageFromIndexedDB(db, imageUrl) {
 // Fetch image as a blob and store it in IndexedDB
 async function fetchAndCacheImage(db, imageUrl) {
     try {
-        const response = await fetch(imageUrl);
+        // Use a different CORS proxy
+        const proxyUrl = 'https://api.allorigins.win/raw?url=';
+        const proxiedUrl = proxyUrl + encodeURIComponent(imageUrl);
+        const response = await fetch(proxiedUrl);
         if (!response.ok) {
             throw new Error(`Failed to fetch image: ${response.statusText}`);
         }
@@ -116,7 +120,7 @@ async function loadImagesToIndexedDB(cards) {
 }
 
 // Fetch card data from the API
-async function fetchAllCards() {
+export async function fetchAllCards() {
     try {
         const response = await fetch(API_URL);
         if (!response.ok) {
@@ -221,20 +225,16 @@ function updatePaginationControls(currentPage, totalPages) {
         return button;
     };
 
-  
     paginationControls.appendChild(createButton(currentPage - 1, "Previous", false, currentPage === 1));
 
-   
     paginationControls.appendChild(createButton(1, "1", currentPage === 1));
 
-   
     if (currentPage > 3) {
         const ellipsis = document.createElement("span");
         ellipsis.textContent = "...";
         paginationControls.appendChild(ellipsis);
     }
 
-   
     const startPage = Math.max(2, currentPage - 2);
     const endPage = Math.min(totalPages - 1, currentPage + 2);
 
@@ -242,22 +242,18 @@ function updatePaginationControls(currentPage, totalPages) {
         paginationControls.appendChild(createButton(i, i.toString(), i === currentPage));
     }
 
-    
     if (currentPage < totalPages - 2) {
         const ellipsis = document.createElement("span");
         ellipsis.textContent = "...";
         paginationControls.appendChild(ellipsis);
     }
 
-    
     if (totalPages > 1) {
         paginationControls.appendChild(createButton(totalPages, totalPages.toString(), currentPage === totalPages));
     }
 
-   
     paginationControls.appendChild(createButton(currentPage + 1, "Next", false, currentPage === totalPages));
 }
-
 
 function changePage(newPage) {
     if (newPage < 1 || newPage > totalPages) return;
@@ -268,15 +264,12 @@ function changePage(newPage) {
 
 window.changePage = changePage;
 
-
 window.renderCards = renderCards;
 window.currentPage = currentPage;
 window.totalPages = totalPages;
 
-
 const searchBar = new SearchBar(handleSearch);
 searchBar.appendTo(document.getElementById("searchContainer"));
-
 
 fetchAllCards();
 
@@ -321,13 +314,11 @@ modal.addEventListener("click", (e) => {
     }
 });
 
-
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         closeModal();
     }
 });
-
 
 window.addEventListener("offline", () => {
     const alertBox = document.getElementById("offline-alert");
