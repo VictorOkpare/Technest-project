@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore and view Yu-Gi-Oh! cards from the Elemental HERO archetype. Browse card details, images, and descriptions in an accessible and user-friendly interface.">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Yu-Gi-Oh! Cards Viewer</title>
+</head>
+<body>
+   
+    
+    <div class="logo-container">
+        <img src="../assets/images/logo.png" alt="Yu-Gi-Oh! Logo" class="logo" />
+        <h2>Yu-Gi-Oh! Cards Explorer</h2>
+        <div class="action-buttons">
+            <button id="settingsButton" class="action-button" tabindex="0">⚙️ Settings</button>
+        </div>
+    </div>
+
+    <div id="online-alert">You are back online!</div>
+    <div id="offline-alert">Your network connection was lost!</div>
+
+    <div id="searchContainer"></div>
+
+    <div class="cards-wrapper" id="cardsWrapper" tabindex="0"></div>
+
+    <!-- Card Details Modal -->
+    <div id="cardModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+        <div class="modal-content">
+            <span class="close-btn" tabindex="0" aria-label="Close modal">&times;</span>
+            <div class="modal-card">
+                <img id="modalImage" src="" alt="Card Image">
+                <div class="card-details">
+                    <h2 id="modalName" id="modalTitle"></h2>
+                    <p id="modalType"></p>
+                    <p id="modalAttribute"></p>
+                    <p id="modalLevel"></p>
+                    <p id="modalAtkDef"></p>
+                    <p id="modalDesc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeSettings" tabindex="0" aria-label="Close settings modal">&times;</span>
+            <h2>Settings</h2>
+            <div class="settings-options">
+                <!-- Automatic Theme Switching -->
+                <div class="auto-theme-toggle">
+                    <p>Enable Auto Theme (Day/Night):</p>
+                    <label>
+                        <input type="radio" name="autoTheme" id="autoThemeYes" value="yes"> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="autoTheme" id="autoThemeNo" value="no" checked> No
+                    </label>
+                </div>
+
+                <!-- Archetype Selection -->
+                <label for="archetypeSelect">Select Deck by Archetype</label>
+                <select id="archetypeSelect">
+                    <option value="Elemental HERO">Elemental HERO</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination-section">
+        <div class="load-more-wrapper">
+            <button class="load-more-button" tabindex="0">Load More</button>
+        </div>
+        <div class="pagination-wrapper">
+            <div id="paginationControls" role="navigation" aria-label="Pagination"></div>
+        </div>
+        <div class="jump-to-wrapper">
+            <div class="jump-to-container">
+                <input type="number" class="jump-to-input" tabindex="0" placeholder="Page">
+                <button class="jump-to-button" tabindex="0">Go</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js" type="module"></script>
+    <script src="./settings.js" type="module"></script>
+    <script src="./theme.js"></script>
+</body>
+</html>
