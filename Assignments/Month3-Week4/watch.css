@@ -1,0 +1,133 @@
+/* Video Page Styles */
+.video-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent1);
+}
+
+.season-selector {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.season-dropdown {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--accent1);
+    border-radius: 25px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.season-section {
+    display: none;
+}
+
+.season-section.active {
+    display: block;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    
+}
+
+.episode-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.episode-title {
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.accessibility-notice {
+    text-align: center;
+    padding: 1rem;
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.video-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--secondary-bg);
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .season-dropdown {
+        width: 100%;
+    }
+}
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent1);
+    border-radius: 5px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: var(--accent2);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination button.active {
+    background: var(--accent1);
+    color: #fff;
+    font-weight: bold;
+}

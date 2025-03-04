@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Yu-Gi-Oh! Cards Explorer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./about.css"> 
+    <link rel="stylesheet" href="./nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.htm" class="navbar-logo-link">
+                <img src="https://res.cloudinary.com/djmhfdvp5/image/upload/v1741034253/images/Yu-gi-oh/utplqr5xlq1uwy68af0d.png" alt="Yu-Gi-Oh! Logo" class="navbar-logo" />
+            </a>
+            <h2 class="navbar-title">Yu-Gi-Oh! Cards Explorer</h2>
+        </div>
+    
+        <!-- Hamburger Icon -->
+        <button class="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    
+        <!-- Navbar Links and Settings Button -->
+        <div class="navbar-links">
+            <a href="index.htm" class="navbar-link">Cards</a>
+            <a href="watch.htm" class="navbar-link">Watch</a>
+            <a href="about.htm" class="navbar-link">About</a>
+            <a id="settingsButton" class="navbar-link">Settings</a>
+        </div>
+    </nav>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeSettings" tabindex="0" aria-label="Close settings modal">&times;</span>
+            <h2>Settings</h2>
+            <div class="settings-options">
+                
+                <div class="auto-theme-toggle">
+                    <p>Enable Auto Theme (Day/Night):</p>
+                    <label>
+                        <input type="radio" name="autoTheme" id="autoThemeYes" value="yes"> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="autoTheme" id="autoThemeNo" value="no" checked> No
+                    </label>
+                </div>
+
+                <!-- Archetype Selection -->
+                <label for="archetypeSelect">Select Deck by Archetype</label>
+                <select id="archetypeSelect">
+                    <option value="Elemental HERO">Elemental HERO</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page Content -->
+    <main class="about-container">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1>About Yu-Gi-Oh! Explorer</h1>
+            <p>Your ultimate destination to explore and discover Yu-Gi-Oh! cards from various archetypes and watch free episodes from the official Yu-Gi-Oh youtube channel .</p>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="about-section">
+            <h2>Yu Gi Oh Explorer</h2>
+            <p>
+                The Yu-Gi-Oh! Explorer is a web application designed to provide fans and players with an easy-to-use interface to browse, search, and view detailed information about Yu-Gi-Oh! cards. Additionally, you can watch Yu-Gi-Oh! GX episodes directly on the site, embedded from YouTube. Whether you're a seasoned duelist or a newcomer to the game, this tool helps you explore cards and episodes from your favorite archetypes, such as <strong>Elemental HERO</strong>, and more.
+            </p>
+            <div class="image-gallery">
+                <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/11/Yu-Gi-Oh!-GX.jpg" alt="Yu-Gi-Oh! GX" class="about-image">
+                <img src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2023/08/collage-maker-31-aug-2023-10-50-pm-8278.jpg" alt="Yu-Gi-Oh! Card Art" class="about-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY37w108Iil_t4LgGRut6GXumKWyjULVTJvw&s" alt="Yu-Gi-Oh! Card Art" class="about-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqk3QNJ_FEPBJkMNKZnmpuLDUIBBCVBMMwBQ&s" alt="Yu-Gi-Oh! Card Art" class="about-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTac_l2piNRXYy1upAdjilka_hcIH3WHBXYyQ&s" alt="Yu-Gi-Oh! Card Art" class="about-image">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="about-section">
+            <h2>Features</h2>
+            <ul class="features-list">
+                <li>🔎 <strong>Search and Filter:</strong> Easily search for cards by name, attribute, type, or level.</li>
+                <li>🃏 <strong>Switch Deck:</strong> Easily switch decks to sort by archetype with the settings button.</li>
+                <li>🖼️ <strong>High-Quality Images:</strong> View card images in high resolution with detailed descriptions.</li>
+                <li>🎬 <strong>Watch Episodes:</strong> Stream Yu-Gi-Oh! GX episodes directly on the site.</li>
+                <li>📱 <strong>Responsive Design:</strong> Access the app seamlessly on desktop, tablet, or mobile devices.</li>
+                <li>🌓 <strong>Dark/Light Mode:</strong> Switch between themes for a comfortable viewing experience.</li>
+                <li>📂 <strong>Offline Access:</strong> Cache card images for offline viewing.</li>
+            </ul>
+        </section>
+
+        <!-- Technologies Used -->
+        <section class="about-section">
+            <h2>Technologies Used</h2>
+            <div class="tech-stack" id="techStack"></div>
+        </section>
+
+        <!-- Developer Information -->
+        <section class="about-section">
+            <h2>Developer</h2>
+            <div class="developer-info">
+                <img src="https://res.cloudinary.com/djmhfdvp5/image/upload/v1741109349/images/Yu-gi-oh/jgvlfswwip5frmvndwhx.jpg" alt="Developer Avatar" class="developer-avatar">
+                <div class="developer-details">
+                    <h3>Victor Okpare</h3>
+                    <p>Passionate about building interactive and user-friendly web applications. This project was created to help Yu-Gi-Oh! fans explore their favorite cards and episodes with ease.</p>
+                    <a href="https://github.com/VictorOkpare" target="_blank" class="github-link">GitHub Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call-to-Action -->
+        <section class="about-section cta">
+            <h2>Ready to Explore?</h2>
+            <p>Start browsing Yu-Gi-Oh! cards and episodes now and discover the world of dueling!</p>
+            <a href="index.htm" class="cta-button">Go to App</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="about-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Yu-Gi-Oh! Cards Explorer. All rights reserved.</p>
+            <p class="disclaimer">
+                <strong>Disclaimer:</strong> This site embeds videos from the official 
+                <a href="https://www.youtube.com/user/yugioh" target="_blank" rel="noopener noreferrer">Yu-Gi-Oh! YouTube channel</a>. 
+                All card data is sourced from the 
+                <a href="https://ygoprodeck.com/api-guide/" target="_blank" rel="noopener noreferrer">YGOPRODeck Public API</a>. 
+                We do not host or claim ownership of any videos or card data. All rights belong to their respective owners.
+            </p>
+        </div>
+    </footer>
+    
+    <script src="./settings.js" type="module"></script>
+    <script src="./theme.js"></script>
+
+    <script>
+        const techData = [
+            {
+                name: "HTML5",
+                image: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+            },
+            {
+                name: "CSS3",
+                image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+            },
+            {
+                name: "JavaScript",
+                image: "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+            },
+            {
+                name: "Fuse.js",
+                image: "https://img.stackshare.io/service/145321/default_72ab9747970c95e5bec6f15e4628ce63b18de2bf.png"
+            }
+        ];
+
+        const techStack = document.getElementById("techStack");
+
+        techData.forEach((tech) => {
+            const techItem = `
+                <div class="tech-item">
+                    <img src="${tech.image}" alt="${tech.name}">
+                    <p>${tech.name}</p>
+                </div>
+            `;
+            techStack.innerHTML += techItem;
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const techItems = document.querySelectorAll(".tech-item");
+            techItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                }, index * 200); // Delay each card
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Yu-Gi-Oh! GX Episodes | Yu-Gi-Oh! Cards Explorer</title>
+    <meta name="description" content="Watch all Yu-Gi-Oh! GX episodes from Season 1 to Season 3. Relive the adventures of Jaden Yuki and his friends at Duel Academy.">
+    <meta name="keywords" content="Yu-Gi-Oh GX, watch Yu-Gi-Oh, anime episodes, duel academy, Jaden Yuki">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./watch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.htm" class="navbar-logo-link">
+                <img src="https://res.cloudinary.com/djmhfdvp5/image/upload/v1741034253/images/Yu-gi-oh/utplqr5xlq1uwy68af0d.png" alt="Yu-Gi-Oh! Logo" class="navbar-logo" />
+            </a>
+            <h2 class="navbar-title">Yu-Gi-Oh! Cards Explorer</h2>
+        </div>
+    
+        <!-- Hamburger Icon -->
+        <button class="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    
+        <!-- Navbar Links and Settings Button -->
+        <div class="navbar-links">
+            <a href="index.htm" class="navbar-link">Cards</a>
+            <a href="watch.htm" class="navbar-link">Watch</a>
+            <a href="about.htm" class="navbar-link">About</a>
+            <a id="settingsButton" class="navbar-link">Settings</a>
+        </div>
+    </nav>
+
+    <main class="video-main">
+        <h1 class="page-title">Watch Yu-Gi-Oh! GX Episodes</h1>
+        
+        <!-- Season Selection -->
+        <div class="season-selector">
+            <label for="seasonSelect">Select Season:</label>
+            <select id="seasonSelect" class="season-dropdown">
+                <option value="0">Season 1</option>
+                <option value="1">Season 2</option>
+                <option value="2">Season 3</option>
+            </select>
+        </div>
+
+        <!-- Season 1 Episodes -->
+        
+                <!-- Episode 1 -->
+                 <!-- Episode Container -->
+        <div id="episodeContainer" class="episodes-grid"></div>
+                <!-- Add more episodes -->
+            
+
+       
+
+        <!-- Accessibility Notice -->
+        <div class="accessibility-notice">
+            <p>🔊 Closed captions available in YouTube player controls. Use keyboard navigation to control videos.</p>
+        </div>
+    </main>
+
+    <footer class="about-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Yu-Gi-Oh! Cards Explorer. All rights reserved.</p>
+            <p class="disclaimer">
+                <strong>Disclaimer:</strong> This site embeds videos from the official 
+                <a href="https://www.youtube.com/@yugioh" target="_blank" rel="noopener noreferrer">Yu-Gi-Oh! YouTube channel</a>. 
+                All card data is sourced from the 
+                <a href="https://ygoprodeck.com/api-guide/" target="_blank" rel="noopener noreferrer">YGOPRODeck Public API</a>. 
+                We do not host or claim ownership of any videos or card data. All rights belong to their respective owners.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Season switching logic
+        document.getElementById('seasonSelect').addEventListener('change', function(e) {
+            document.querySelector('.season-section.active').classList.remove('active');
+            document.getElementById(e.target.value).classList.add('active');
+        });
+    </script>
+    <script  src="theme.js"></script>
+    <script  src="watch.js"></script>
+    <script  src="nav.js"></script>
+</body>
+</html>

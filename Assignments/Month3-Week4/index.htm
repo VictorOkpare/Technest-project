@@ -2,23 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Open Graph Meta Tags (for Facebook, LinkedIn, Instagram, etc.) -->
+    <meta property="og:title" content="Yu-Gi-Oh! Cards Viewer - Elemental HERO Archetype">
+    <meta property="og:description" content="Explore and view Yu-Gi-Oh! cards from the Elemental HERO archetype. Browse card details, images, and descriptions in an accessible and user-friendly interface.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://technest-project.vercel.app/">
+    <meta property="og:image" content="https://res.cloudinary.com/djmhfdvp5/image/upload/v1741034253/images/Yu-gi-oh/utplqr5xlq1uwy68af0d.png">
+    <meta property="og:image:alt" content="Yu-Gi-Oh! Logo">
+    <meta property="og:site_name" content="Yu-Gi-Oh! Cards Viewer">
+    
+    <meta property="og:image:width" content="1200"> 
+    <meta property="og:image:height" content="630"> 
+    <meta property="og:locale" content="en_US"> 
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore and view Yu-Gi-Oh! cards from the Elemental HERO archetype. Browse card details, images, and descriptions in an accessible and user-friendly interface.">
+    <meta name="description" content="Explore and view Yu-Gi-Oh! cards from different archetype. Switch display deck by selecting an archetype. Browse card details, images, and descriptions in an accessible and user-friendly interface.">
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.png">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/djmhfdvp5/image/upload/v1741034253/images/Yu-gi-oh/utplqr5xlq1uwy68af0d.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <title>Yu-Gi-Oh! Cards Viewer</title>
 </head>
 <body>
-   
-    
-    <div class="logo-container">
-        <img src="../assets/images/logo.png" alt="Yu-Gi-Oh! Logo" class="logo" />
-        <h2>Yu-Gi-Oh! Cards Explorer</h2>
-        <div class="action-buttons">
-            <button id="settingsButton" class="action-button" tabindex="0">⚙️ Settings</button>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.htm" class="navbar-logo-link">
+                <img src="https://res.cloudinary.com/djmhfdvp5/image/upload/v1741034253/images/Yu-gi-oh/utplqr5xlq1uwy68af0d.png" alt="Yu-Gi-Oh! Logo" class="navbar-logo" />
+            </a>
+            <h2 class="navbar-title">Yu-Gi-Oh! Explorer</h2>
         </div>
-    </div>
+    
+        <!-- Hamburger Icon -->
+        <button class="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    
+        <!-- Navbar Links and Settings Button -->
+        <div class="navbar-links">
+            <a href="index.htm" class="navbar-link">Cards</a>
+            <a href="watch.htm" class="navbar-link">Watch</a>
+            <a href="about.htm" class="navbar-link">About</a>
+            <a id="settingsButton" class="navbar-link">Settings</a>
+        </div>
+    </nav>
 
     <div id="online-alert">You are back online!</div>
     <div id="offline-alert">Your network connection was lost!</div>
@@ -85,6 +113,19 @@
             </div>
         </div>
     </div>
+
+    <footer class="about-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Yu-Gi-Oh! Cards Explorer. All rights reserved.</p>
+            <p class="disclaimer">
+                <strong>Disclaimer:</strong> This site embeds videos from the official 
+                <a href="https://www.youtube.com/@yugioh" target="_blank" rel="noopener noreferrer">Yu-Gi-Oh! YouTube channel</a>. 
+                All card data is sourced from the 
+                <a href="https://ygoprodeck.com/api-guide/" target="_blank" rel="noopener noreferrer">YGOPRODeck Public API</a>. 
+                We do not host or claim ownership of any videos or card data. All rights belong to their respective owners.
+            </p>
+        </div>
+    </footer>
 
     <script src="./main.js" type="module"></script>
     <script src="./settings.js" type="module"></script>

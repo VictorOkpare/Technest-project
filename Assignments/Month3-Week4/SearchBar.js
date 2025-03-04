@@ -13,7 +13,7 @@ export default class SearchBar {
         // Search input field
         this.searchInput = document.createElement("input");
         this.searchInput.type = "text";
-        this.searchInput.placeholder = "Enter a card name(partial matches are allowed)"; // Indicate fuzzy search
+        this.searchInput.placeholder = "Enter a card name"; // Indicate fuzzy search
         this.searchInput.classList.add("search-input");
 
         // Filter button
@@ -57,16 +57,16 @@ export default class SearchBar {
         // Update placeholder text to indicate fuzzy search
         switch (this.searchCategory) {
             case "name":
-                this.searchInput.placeholder = "Enter a card name (partial matches are allowed)";
+                this.searchInput.placeholder = "Enter a card name ";
                 break;
             case "attribute":
-                this.searchInput.placeholder = "Enter a card attribute (partial matches are allowed)";
+                this.searchInput.placeholder = "Enter a card attribute";
                 break;
             case "type":
-                this.searchInput.placeholder = "Enter a card type (partial matches are allowed)";
+                this.searchInput.placeholder = "Enter a card type ";
                 break;
             case "level":
-                this.searchInput.placeholder = "Enter a card level (partial matches are allowed)";
+                this.searchInput.placeholder = "Enter a card level ";
                 break;
         }
 

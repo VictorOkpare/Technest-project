@@ -15,7 +15,7 @@
     --primary-bg: #f5f5f5;
     --secondary-bg: #ffffff;
     --accent1: #b00f0f;
-    --accent2: #4caf50;
+    --accent2: #ff3b2f;
     --text-color: #1e1e2f;
     --input-bg: rgba(0, 0, 0, 0.05);
     --border-color: rgba(0, 0, 0, 0.1);
@@ -37,29 +37,6 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
-
-
-.logo-container {
-    text-align: center;
-    margin-bottom: 30px;
-    
-}
-
-.logo-container img {
-    width: 100px;
-    height: auto;
-}
-
-.logo-container h2 {
-    font-size: 24px;
-    font-weight: 600;
-    /* margin-top:10 px; */
-    color: var(--text-color);
-   
-}
-
-
-
 
 .search-bar {
     display: flex;
@@ -121,7 +98,7 @@ body {
 }
 
 .card-container {
-    background: var(--card-bg);
+    background: var(--secondary-bg);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -277,7 +254,7 @@ body {
     align-items: center;
     margin-top: 20px;
     padding: 20px;
-    background: var(--card-bg);
+    background: var(--secondary-bg);;
     border-radius: 10px;
 }
 
@@ -378,32 +355,9 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Action Buttons */
-.action-buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 10px;
-}
 
-.action-button {
-    background: var(--accent1);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
 
-.action-button:hover {
-    background: var(--accent2);
-    transform: translateY(-2px);
-}
 
-/* Settings and Game Mode Modals */
 .settings-options, .game-mode-options {
     display: flex;
     flex-direction: column;
@@ -444,38 +398,7 @@ body {
     
 }
 
-.mode-button {
-    background: var(--accent1);
-    color: var(--text-color);
-    border: none;
-    padding: 12px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
 
-.mode-button:hover {
-    background: var(--accent2);
-    transform: translateY(-2px);
-}
-
-/* Skip link styling */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: white;
-    padding: 8px;
-    z-index: 100;
-    transition: top 0.3s;
-}
-
-.skip-link:focus {
-    top: 0;
-}
 
 /* Focus styles for interactive elements */
 button:focus,
@@ -490,80 +413,37 @@ a:focus {
 .modal:focus {
     outline: none;
 }
-
-
-
-/* Game Mode Modal Steps */
-/* #welcomeStep,
-#declarationStep,
-#instructionsStep,
-#gameModeSelectionStep,
-#gameInterface {
-    text-align: center;
-}
-
-#gameInterface .game-board {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-#gameInterface .player-area {
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-    padding: 20px;
-    width: 45%;
-    background: var(--card-bg);
-}
-
-#gameInterface .cards {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-#gameInterface .card {
+.about-footer {
     background: var(--secondary-bg);
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem 1rem;
+    text-align: center;
+     margin-top: 3rem;
+    border-radius: 10px;
 }
 
-#gameInterface .card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-#gameInterface .card img {
-    width: 100px;
-    height: auto;
-}
-
-#gameInterface #endTurn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: var(--accent1);
+.about-footer p {
+    margin: 0.5rem 0;
     color: var(--text-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.about-footer .disclaimer {
+    font-size: 1rem;
+    color: var(--text-color-light);
+    line-height: 1.5;
+}
+
+.about-footer a {
+    color: var(--accent1);
+    text-decoration: none;
     font-weight: 600;
-    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-#gameInterface #endTurn:hover {
-    background: var(--accent2);
-    transform: translateY(-2px);
-} */
-
-/* Animations */
-/* @keyframes cardDraw {
-    0% { opacity: 0; transform: scale(0.5); }
-    100% { opacity: 1; transform: scale(1); }
+.about-footer a:hover {
+    text-decoration: underline;
 }
-
-.card {
-    animation: cardDraw 0.5s ease;
-} */

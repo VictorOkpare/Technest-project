@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Yu-Gi-Oh! Cards Viewer</title>
+</head>
+<body>
+  
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="https://res.cloudinary.com/djmhfdvp5/image/upload/v1741034253/images/Yu-gi-oh/utplqr5xlq1uwy68af0d.png" alt="Yu-Gi-Oh! Logo" class="logo">
+                <h1>Cards Explorer</h1>
+            </div>
+            <!-- <button class="hamburger" aria-label="Toggle navigation">
+                <span class="hamburger-icon"></span>
+            </button> -->
+            <div class="navbar-links">
+                <div id="searchContainer" class="search-bar"></div>
+                <div class="navbar-buttons">
+                    <button id="settingsButton" class="nav-button" tabindex="0" aria-label="Open settings">Settings</button>
+                    <button id="gameModeButton" class="nav-button" tabindex="0" aria-label="Open game mode">Game Mode</button>
+                    <button id="aboutButton" class="nav-button" tabindex="0" aria-label="Open about page">About</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Cards and other content -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Yu-Gi-Oh! Cards Viewer</p>
+    </footer>
+
+    <script src="./main.js" type="module"></script>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.navbar-links').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
