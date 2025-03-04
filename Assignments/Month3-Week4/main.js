@@ -49,7 +49,7 @@ function saveImageToIndexedDB(db, imageUrl, blob) {
         const request = store.put({ url: imageUrl, blob });
 
         request.onsuccess = () => {
-            console.log(`Image saved to IndexedDB: ${imageUrl}`);
+           
             resolve();
         };
 
@@ -70,7 +70,7 @@ function loadImageFromIndexedDB(db, imageUrl) {
         request.onsuccess = (event) => {
             const result = event.target.result;
             if (result) {
-                console.log(`Image loaded from IndexedDB: ${imageUrl}`);
+                
                 resolve(result.blob);
             } else {
                 resolve(null);
@@ -112,7 +112,7 @@ async function loadImagesToIndexedDB(cards) {
         // Check if the image is already cached
         const cachedImage = await loadImageFromIndexedDB(db, imageUrl);
         if (cachedImage) {
-            console.log(`Image already cached: ${imageUrl}`);
+           
             continue;
         }
 
